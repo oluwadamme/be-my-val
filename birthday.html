@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy 24th Birthday, My Monalisa 🎂</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -709,30 +711,30 @@ function moveVideo(dir){
 
 // ─── REASONS ───
 const REASONS=[
-  {e:'✨',t:"Your laugh is the most beautiful sound I have ever heard."},
-  {e:'🌙',t:"You make ordinary days feel like something genuinely magical."},
-  {e:'💫',t:"The way you look when you don't know I'm watching — breathtaking."},
-  {e:'🌸',t:"Your kindness, which never once asks for anything in return."},
-  {e:'🎨',t:"You see beauty everywhere — and you teach me to see it too."},
+  {e:'✨',t:"Your laugh. I don't think anything has ever hit me the way it does."},
+  {e:'🌙',t:"How normal days with you don't actually feel normal at all."},
+  {e:'💫',t:"The way you look when you don't know I'm watching."},
+  {e:'🌸',t:"Your kindness — you give it without keeping score."},
+  {e:'🎨',t:"How you notice things. You've made me pay more attention."},
   {e:'🦋',t:"Every time I see your name on my screen, my heart still jumps."},
-  {e:'☀️',t:"You are the very first thought I have every single morning."},
-  {e:'🌊',t:"The way you carry yourself — quietly confident and endlessly graceful."},
+  {e:'☀️',t:"I think about you everyday and you always make me smile."},
+  {e:'🌊',t:"The way you carry yourself. Like you know exactly who you are."},
   {e:'💜',t:"Your voice, even when you're saying nothing important at all."},
-  {e:'🌟',t:"That you chose me — and you keep on choosing me."},
-  {e:'🍀',t:"The way you care for the people you love — so deeply, so fully."},
-  {e:'🌺',t:"Your smile, which has the power to fix absolutely everything."},
-  {e:'💝',t:"How you remember the little things — it makes me feel so seen."},
-  {e:'🎵',t:"You dance like no one's watching, and it is the most beautiful thing."},
-  {e:'🤍',t:"Your softness. The quiet warmth you carry without even knowing it."},
+  {e:'🌟',t:"That you chose me. And that you still do."},
+  {e:'🍀',t:"How you love the people in your life. You don't do it halfway."},
+  {e:'🌺',t:"Your smile. It's not fair, honestly."},
+  {e:'💝',t:"How you remember the little things. I never have to wonder if you're paying attention."},
+  {e:'🎵',t:"The way you dance when you forget yourself."},
+  {e:'🤍',t:"Your softness. You don't even notice it half the time."},
   {e:'💫',t:"The way you say my name."},
   {e:'🌙',t:"How you look in the morning — sleepy, unbothered, and still the prettiest."},
-  {e:'🌿',t:"That you stayed through every hard season, every difficult chapter."},
-  {e:'💖',t:"Your dreams — big, bold, beautiful. I believe in every single one."},
+  {e:'🌿',t:"That you stayed. Through the hard parts."},
+  {e:'💖',t:"Your dreams. I've never doubted a single one of them."},
   {e:'🌷',t:"The way your face lights up when you're excited about something."},
-  {e:'🌟',t:"That you're somehow even more wonderful than the day I started falling for you."},
-  {e:'🎀',t:"You are my favourite person on this entire earth — today and always."},
-  {e:'✨',t:"You turned 24 today, and the world is genuinely better for it."},
-  {e:'💍',t:"That you are mine — and I get to spend the rest of my life loving you."},
+  {e:'🌟',t:"That you keep surprising me. You're better now than you were then."},
+  {e:'🎀',t:"You are my favourite person on earth. Full stop."},
+  {e:'✨',t:"Happy 24th Birthday my love. I feel lucky I get to have you."},
+  {e:'💍',t:"That you're mine. And that I get to keep loving you."},
 ];
 
 let rBuilt=false, rAnimated=false;
@@ -781,7 +783,7 @@ function launchConfetti(){
 
 function launchFireworks(){
   const colors=['#FFD700','#FFC107','#FF6B9D','#a855f7','#00e5ff','#fff','#FF4081'];
-  function burst(x,y){ const col=colors[Math.floor(Math.random()*colors.length)]; for(let i=0;i<22;i++){ const f=document.createElement('div'); f.className='fw'; f.style.left=x+'px'; f.style.top=y+'px'; f.style.background=col; f.style.boxShadow=`0 0 8px ${col}`; const angle=(Math.PI*2/22)*i,dist=50+Math.random()*90; f.style.setProperty('--tx',Math.cos(angle)*dist+'px'); f.style.setProperty('--ty',Math.sin(angle)*dist+'px'); document.body.appendChild(f); setTimeout(()=>f.remove(),1000); } if(actx&&!muted) playNote(500+Math.random()*800,actx.currentTime,.15,.04); }
+  function burst(x,y){ const col=colors[Math.floor(Math.random()*colors.length)]; for(let i=0;i<22;i++){ const f=document.createElement('div'); f.className='fw'; f.style.left=x+'px'; f.style.top=y+'px'; f.style.background=col; f.style.boxShadow='0 0 8px '+col; const angle=(Math.PI*2/22)*i,dist=50+Math.random()*90; f.style.setProperty('--tx',Math.cos(angle)*dist+'px'); f.style.setProperty('--ty',Math.sin(angle)*dist+'px'); document.body.appendChild(f); setTimeout(()=>f.remove(),1000); } if(actx&&!muted) playNote(500+Math.random()*800,actx.currentTime,.15,.04); }
   for(let i=0;i<12;i++) setTimeout(()=>burst(80+Math.random()*(window.innerWidth-160),40+Math.random()*(window.innerHeight*.5)),i*420);
 }
 </script>
