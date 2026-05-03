@@ -526,6 +526,25 @@
       100% { transform: scale(0) translateY(-30px); opacity:0; }
     }
 
+    /* ── page nav ── */
+    .page-nav {
+      position: fixed; top: 20px; left: 20px; z-index: 999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,215,0,.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,215,0,.2);
+      border-radius: 50px;
+      padding: 10px 16px;
+      text-decoration: none;
+      color: #FFD700;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: .5px;
+      transition: all .3s;
+    }
+    .page-nav:hover { background: rgba(255,215,0,.2); transform: scale(1.05); box-shadow: 0 6px 20px rgba(255,215,0,.2); }
+    .page-nav-icon { font-size: 16px; }
+
     /* ── responsive ── */
     @media (max-width:480px) {
       .card { padding:36px 20px; }
@@ -546,6 +565,12 @@
   </style>
 </head>
 <body>
+
+  <!-- page nav -->
+  <a class="page-nav" href="birthday.html">
+    <span class="page-nav-icon">🎂</span>
+    <span>24th Birthday</span>
+  </a>
 
   <!-- music toggle -->
   <div class="music-toggle" id="musicToggle" onclick="toggleMusic()">
